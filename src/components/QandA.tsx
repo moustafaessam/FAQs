@@ -4,7 +4,6 @@ const StyledContainer = styled.details`
   max-width: 52rem;
   width: 100%;
   margin-bottom: 1rem;
-
   @media (max-width: 620px) {
     max-width: 27.9rem;
   }
@@ -19,11 +18,11 @@ const StyledQuestion = styled.summary`
   align-items: center;
   justify-content: space-between;
   list-style: none;
-
-  &::marker {
-    content: "";
+  outline: none;
+  &:hover,
+  &:focus-visible {
+    color: var(--pink); /* Change to your desired purple shade */
   }
-
   @media (max-width: 620px) {
     font-size: 1.6rem;
   }
