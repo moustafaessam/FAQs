@@ -10,7 +10,7 @@ const StyledContainer = styled.section`
   width: 100%;
   align-items: center;
   @media (max-width: 620px) {
-    min-width: 27.9rem;
+    max-width: 27.9rem;
   }
 `;
 
@@ -35,10 +35,6 @@ const StyledButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-
-  &:focus {
-    outline: 2px solid var(--dark-purple);
-  }
 `;
 
 const StyledAnswer = styled.p`
@@ -47,7 +43,7 @@ const StyledAnswer = styled.p`
   font-family: "Work Sans Regular";
   font-size: 1.6rem;
   line-height: 150%;
-  display: none; /* Hide by default */
+  display: none;
 
   &.visible {
     display: block;
@@ -72,14 +68,18 @@ export default function QandA({ question, answer }: QandAProps) {
   const answerId = `answer-${question.replace(/\s+/g, "-").toLowerCase()}`;
 
   return (
-    <StyledContainer>
-      <StyledQuestion id={answerId}>{question}</StyledQuestion>
+    <StyledContainer style={{ rowGap: isAnswerShown ? "2.4rem" : "0" }}>
+      <StyledQuestion>{question}</StyledQuestion>
       <StyledButton
         onClick={handleToggle}
         aria-expanded={isAnswerShown}
         aria-controls={answerId}
       >
         <img
+          style={{
+            width: "3rem",
+            height: "3rem",
+          }}
           src={
             isAnswerShown
               ? "/assets/images/icon-minus.svg"

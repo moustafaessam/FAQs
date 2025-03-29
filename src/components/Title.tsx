@@ -35,6 +35,7 @@ export default function Title() {
         src="/assets/images/icon-star.svg"
         alt=""
         aria-hidden={true}
+        loading="lazy"
       />
       <StyledTitle>FAQs</StyledTitle>
     </StyledHeader>

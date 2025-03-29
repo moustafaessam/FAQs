@@ -5,14 +5,18 @@ export const GlobalStyling = createGlobalStyle`
   @font-face {
     font-family: "Work Sans Bold";
     src: url("/assets/fonts/static/WorkSans-Bold.ttf");
+    font-display: swap;
   }
   @font-face {
     font-family: "Work Sans Regular";
     src: url("/assets/fonts/static/WorkSans-Regular.ttf");
+    font-display: swap;
   }
   @font-face {
     font-family: "Work Sans SemiBold";
     src: url("/assets/fonts/static/WorkSans-SemiBold.ttf");
+    font-display: swap;
+
   }
   * , ::before , ::after {
     margin: 0;
